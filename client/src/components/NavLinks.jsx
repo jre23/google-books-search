@@ -1,6 +1,6 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
-// import "../styles/NavLinks.css"
+import "../styles/NavLinks.css"
 
 const NavLinks = () => {
 
@@ -9,10 +9,10 @@ const NavLinks = () => {
   return (
     <>
       <header>
-        <nav className={location.pathname === "/" ? "navbar navbar-expand-lg navbar-dark" : location.pathname === "/saved" ? "navbar navbar-expand-lg navbar-dark" : "navbar navbar-expand-lg navbar-dark"}>
+        <nav className={location.pathname === "/" || location.pathname === "/search" ? "navbar navbar-expand-lg navbar-dark nav-search" : location.pathname === "/saved" ? "navbar navbar-expand-lg navbar-dark nav-saved" : "navbar navbar-expand-lg navbar-dark"}>
           <Link to="/" className="navbar-brand">
             Google Books
-      </Link>
+          </Link>
           <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
             aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
