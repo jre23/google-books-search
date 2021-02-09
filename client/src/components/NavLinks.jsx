@@ -8,6 +8,10 @@ const NavLinks = () => {
 
   return (
     <>
+      {/* // <!-- Background image  --> */}
+      <div className={location.pathname === "/" || location.pathname === "/search" ? "bg-search" : location.pathname === "/saved" ? "bg-saved" : "bg-search"} role="img" aria-label="Background image">
+      </div>
+
       <header>
         <nav className={location.pathname === "/" || location.pathname === "/search" ? "navbar navbar-expand-lg navbar-dark nav-search" : location.pathname === "/saved" ? "navbar navbar-expand-lg navbar-dark nav-saved" : "navbar navbar-expand-lg navbar-dark"}>
           <Link to="/" className="navbar-brand">

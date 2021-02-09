@@ -42,12 +42,11 @@ a:active {
 
 /* background images for each page */
 .bg-search {
-  background-image: url("");
+  background-image: url("./images/will_van_wingerden-library_background.jpg");
 }
 
 .bg-saved {
-  background-image: url("");
-  opacity: 0.8;
+  background-image: url("./images/janko_ferlic-library_background.jpg");
 }
 
 .bg-search,
