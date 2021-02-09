@@ -11,7 +11,6 @@ const App = () => {
         <NavLinks />
         <Switch>
           <Route exact path="/"> <Search /> </Route>
-          <Route exact path="/search"> <Search /> </Route>
           <Route exact path="/saved" > <Saved /> </Route>
           <Route> <Search /> </Route>
         </Switch>
