@@ -4,20 +4,20 @@ import API from "../../utils/API";
 const Search = () => {
   const [searchState, setSearchState] = useState({
     userSearch: "",
-    results: {}
+    results: []
   })
 
 useEffect(()=>{
   const bookSearchAPI = () => {
-    console.log(searchState.userSearch);
+    if (searchState.userSearch){
     API.search(searchState.userSearch)
       .then(res => {
         console.log("=====res=====");
-        console.log(res);
-        console.log(searchState.userSearch);
-      // setSearchState({...searchState, results: res });
+        console.log(res.data.items);
+      setSearchState({...searchState, results: res.data.items });
       })
     }
+  }
     bookSearchAPI();
   let dataValue = document.getElementById("search-input").value = "";
 }, [searchState.userSearch]);
@@ -39,13 +39,15 @@ const handleSubmit = event => {
         <button type="button" id="button-addon" className="btn btn-secondary justify-content-center col-.5 d-flex mr-auto" style={{ color: "#86b3d1" }} onClick={handleSubmit}>Search</button>
       </div>
       <br/>
-      {/* <ul className="list-group">
-      {searchState.results.map(result => (
-        <li className="list-group-item" key={result.id}>
-          <img alt={result.title} className="img-fluid" src={result.image} />
+      <ul className="list-group">
+      {searchState.results.map(res => (
+        <li className="list-group-item" key={res.id}>
+          <h5>{res.volumeInfo.title}</h5>
+            <img alt={res.volumeInfo.title} className="img-fluid pt-4 pr-4" style={{ float: "left"}} src={res.volumeInfo.imageLinks.smallThumbnail} /><h6 className="pt-4">{res.volumeInfo.description}</h6>
+        
         </li>
       ))}
-    </ul> */}
+    </ul>
     </>
   )
 }
