@@ -11,16 +11,13 @@ const App = () => {
         <NavLinks />
         <Switch>
           <Route exact path={["/", "/search"]}>
-            {" "}
-            <Search />{" "}
+            <Search />
           </Route>
           <Route exact path="/saved">
-            {" "}
-            <Saved />{" "}
+            <Saved />
           </Route>
           <Route>
-            {" "}
-            <Search />{" "}
+            <Search />
           </Route>
         </Switch>
         <Footer />

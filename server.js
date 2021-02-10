@@ -1,6 +1,7 @@
 const express = require("express");
 const path = require("path");
 const mongoose = require("mongoose");
+const routes = require("./routes");
 const app = express();
 const PORT = process.env.PORT || 3001;
 // define middleware
@@ -13,6 +14,7 @@ if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
 // API routes
+app.use(routes);
 // app.use();
 // send every other request to the React app
 app.get("*", (req, res) => {
