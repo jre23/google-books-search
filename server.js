@@ -15,12 +15,10 @@ if (process.env.NODE_ENV === "production") {
 }
 // API routes
 app.use(routes);
-// app.use();
 // send every other request to the React app
 app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "./client/build/index.html"));
 });
-
 // set up connection to mongodb using mongoose
 mongoose.connect(
   process.env.MONGODB_URI || "mongodb://localhost/googlebooks", {
