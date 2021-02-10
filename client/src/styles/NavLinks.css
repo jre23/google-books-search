@@ -1,12 +1,12 @@
 /* navbar background colors */
 .nav-search {
   background-color: #86b3d1;
-  opacity: .9;
+  opacity: 0.9;
 }
 
 .nav-saved {
   background-color: #844d36;
-  opacity: .8;
+  opacity: 0.8;
 }
 
 /* navbar brand, submit button, and contact info font color */

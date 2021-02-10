@@ -6,18 +6,27 @@ import Footer from "./components/Footer";
 
 const App = () => {
   return (
-    <Router >
+    <Router>
       <div>
         <NavLinks />
         <Switch>
-          <Route exact path={["/", "/search"]}> <Search /> </Route>
-          <Route exact path="/saved" > <Saved /> </Route>
-          <Route> <Search /> </Route>
+          <Route exact path={["/", "/search"]}>
+            {" "}
+            <Search />{" "}
+          </Route>
+          <Route exact path="/saved">
+            {" "}
+            <Saved />{" "}
+          </Route>
+          <Route>
+            {" "}
+            <Search />{" "}
+          </Route>
         </Switch>
         <Footer />
       </div>
     </Router>
   );
-}
+};
 
 export default App;
