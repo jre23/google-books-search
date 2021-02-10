@@ -43,7 +43,7 @@ const Search = () => {
       </Jumbotron>
       <SearchInput handleSubmit={handleSubmit}></SearchInput>
       <br />
-      <ResultsList results={searchState.results}></ResultsList>
+      <ResultsList results={searchState.results} saveDel="Save"></ResultsList>
     </>
   );
 };

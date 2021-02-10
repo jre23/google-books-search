@@ -13,7 +13,7 @@ const ResultsList = (props) => {
               </div>
               <div>
                 <a className="btn btn-info" style={{ float: "right" }}>
-                  Save
+                  {props.saveDel}
                 </a>
                 <a
                   href={res.volumeInfo.infoLink}
