@@ -54,6 +54,14 @@ const Search = () => {
       .catch((err) => console.log(err));
   };
 
+  const enterKey = (event) => {
+    if (event.which === 13) {
+      let dataValue = document.getElementById("search-input").value;
+      setSearchState({ ...searchState, userSearch: dataValue });
+      return false;
+    }
+  };
+
   return (
     <>
       <br />
@@ -62,7 +70,10 @@ const Search = () => {
         <br />
         <h2>Search for and add books to your saved page!</h2>
       </Jumbotron>
-      <SearchInput handleSubmit={handleSubmit}></SearchInput>
+      <SearchInput
+        handleSubmit={handleSubmit}
+        enterKey={enterKey}
+      ></SearchInput>
       <br />
       <ResultsList
         results={searchState.results}

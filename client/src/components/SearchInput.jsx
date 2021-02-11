@@ -16,6 +16,7 @@ const SearchInput = (props) => {
           className="form-control"
           aria-label="Text input"
           aria-describedby="button-addon"
+          onKeyPress={props.enterKey}
         />
         <button
           type="button"
