@@ -2,7 +2,6 @@ import React from "react";
 
 const ResultsList = (props) => {
   console.log("====results list component====");
-  console.log(props.results);
   return (
     <>
       <div className="col">
