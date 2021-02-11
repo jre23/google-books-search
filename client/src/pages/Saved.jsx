@@ -5,24 +5,14 @@ import SavedList from "../components/SavedList";
 
 const Saved = () => {
   const [savedBooks, setSavedBooks] = useState({
-    results: [
-      {
-        title: "Test Title",
-        authors: ["Joel Estrada"],
-        description: "Testing saved component",
-        image:
-          "http://books.google.com/books/content?id=4D6FDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
-        link:
-          "https://play.google.com/store/books/details?id=4D6FDwAAQBAJ&source=gbs_api",
-      },
-    ],
+    results: [],
   });
 
   const loadSavedBooks = () => {
     API.getSavedBooks()
       .then((res) => {
         setSavedBooks({ results: res.data });
-        console.log(res);
+        console.log(res.data);
       })
       .catch((err) => console.log(err));
   };
@@ -31,8 +21,19 @@ const Saved = () => {
     loadSavedBooks();
   }, []);
 
-  const handleDelete = (event) => {
-    console.log(event);
+  const handleDelete = (id) => {
+    console.log(id);
+    let deleteBool = window.confirm(
+      "Are you sure you want to delete this saved book?"
+    );
+    if (deleteBool) {
+      API.deleteBook(id)
+        .then((res) => {
+          console.log(res);
+          loadSavedBooks();
+        })
+        .catch((err) => console.log(err));
+    }
   };
 
   return (

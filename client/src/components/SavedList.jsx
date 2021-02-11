@@ -8,7 +8,7 @@ const SavedList = (props) => {
       <div className="col">
         <ul className="list-group" style={{ opacity: "0.88" }}>
           {props.results.map((res) => (
-            <li className="list-group-item" key={1}>
+            <li className="list-group-item" key={res._id}>
               <div style={{ float: "left" }}>
                 <h5>{res.title}</h5>
                 <h6>
@@ -25,7 +25,7 @@ const SavedList = (props) => {
                   className="btn btn-info"
                   style={{ float: "right" }}
                   onClick={() => {
-                    props.handleDelete(1);
+                    props.handleDelete(res._id);
                   }}
                 >
                   {props.saveDel}

@@ -40,7 +40,6 @@ const Search = () => {
 
   const handleSave = (event) => {
     console.log("====handleSave====");
-    console.log(event);
     let bookData = {
       title: event.title,
       authors: event.authors,
@@ -48,9 +47,11 @@ const Search = () => {
       image: event.imageLinks.thumbnail,
       link: event.infoLink,
     };
-    console.log(bookData);
     API.saveBook(bookData)
-      .then((res) => console.log(res))
+      .then((res) => {
+        console.log(res);
+        window.alert("This book has been saved!");
+      })
       .catch((err) => console.log(err));
   };
 
