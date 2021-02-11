@@ -15,7 +15,7 @@ const Search = () => {
     API.search(searchState.userSearch)
       .then((res) => {
         // console.log("=====res=====");
-        // console.log(res.data.items);
+        console.log(res.data.items);
         setSearchState({
           ...searchState,
           results: res.data.items,

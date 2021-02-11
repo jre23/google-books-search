@@ -11,12 +11,16 @@ const API = {
     return axios.get(BASEURL + maxResults + userSearch + query);
   },
   getSavedBooks: () => {
-    console.log("====getBooks====");
+    console.log("====getSavedBooks====");
     return axios.get("/api/books");
   },
   saveBook: (bookData) => {
     console.log("====saveBook====");
-    return axios.post("api/books/", bookData);
+    return axios.post("/api/books/", bookData);
+  },
+  deleteBook: (id) => {
+    console.log("====deleteBook====");
+    return axios.delete("/api/books/" + id);
   },
 };
 
