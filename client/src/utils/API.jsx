@@ -14,15 +14,10 @@ const API = {
     console.log("====getBooks====");
     return axios.get("/api/books");
   },
+  saveBook: (bookData) => {
+    console.log("====saveBook====");
+    return axios.post("api/books/", bookData);
+  },
 };
-
-// const API = {
-//   // function to search for a book based on user input
-//   search: (query) => {
-//     console.log("====API====");
-//     console.log(query);
-//     return axios.get("/api/google/" + query);
-//   },
-// };
 
 export default API;

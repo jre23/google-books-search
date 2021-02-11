@@ -20,7 +20,13 @@ const ResultsList = (props) => {
                 </h6>
               </div>
               <div>
-                <a className="btn btn-info" style={{ float: "right" }}>
+                <a
+                  className="btn btn-info"
+                  style={{ float: "right" }}
+                  onClick={() => {
+                    props.handleSave(res.volumeInfo);
+                  }}
+                >
                   {props.saveDel}
                 </a>
                 <a

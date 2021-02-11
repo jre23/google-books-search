@@ -12,7 +12,7 @@ const Saved = () => {
     API.getSavedBooks()
       .then((res) => {
         setSavedBooks({ results: res.data });
-        console.log(res.data);
+        console.log(res);
       })
       .catch((err) => console.log(err));
   };

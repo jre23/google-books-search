@@ -38,6 +38,22 @@ const Search = () => {
     setSearchState({ ...searchState, userSearch: dataValue });
   };
 
+  const handleSave = (event) => {
+    console.log("====handleSave====");
+    console.log(event);
+    let bookData = {
+      title: event.title,
+      authors: event.authors,
+      description: event.description,
+      image: event.imageLinks.thumbnail,
+      link: event.infoLink,
+    };
+    console.log(bookData);
+    API.saveBook(bookData)
+      .then((res) => console.log(res))
+      .catch((err) => console.log(err));
+  };
+
   return (
     <>
       <br />
@@ -48,7 +64,11 @@ const Search = () => {
       </Jumbotron>
       <SearchInput handleSubmit={handleSubmit}></SearchInput>
       <br />
-      <ResultsList results={searchState.results} saveDel="Save"></ResultsList>
+      <ResultsList
+        results={searchState.results}
+        saveDel="Save"
+        handleSave={handleSave}
+      ></ResultsList>
     </>
   );
 };

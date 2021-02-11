@@ -5,9 +5,7 @@ const routes = require("./routes");
 const app = express();
 const PORT = process.env.PORT || 3001;
 // define middleware
-app.use(express.urlencoded({
-  extended: true
-}));
+app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 // serve static assets (usually on heroku)
 if (process.env.NODE_ENV === "production") {
