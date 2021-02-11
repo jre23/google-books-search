@@ -10,19 +10,24 @@ const Search = () => {
     results: [],
   });
 
-  useEffect(() => {
-    const bookSearchAPI = () => {
-      console.log(searchState.userSearch);
-      API.search(searchState.userSearch).then((res) => {
-        console.log("=====res=====");
-        console.log(res.data.items);
+  const bookSearchAPI = () => {
+    // console.log(searchState.userSearch);
+    API.search(searchState.userSearch)
+      .then((res) => {
+        // console.log("=====res=====");
+        // console.log(res.data.items);
         setSearchState({
-          userSearch: searchState.userSearch,
+          ...searchState,
           results: res.data.items,
         });
-      });
-    };
-    bookSearchAPI();
+      })
+      .catch((err) => console.log(err));
+  };
+
+  useEffect(() => {
+    if (searchState.userSearch !== "") {
+      bookSearchAPI();
+    }
     let dataValue = (document.getElementById("search-input").value = "");
   }, [searchState.userSearch]);
 

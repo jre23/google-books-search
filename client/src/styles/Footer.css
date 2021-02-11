@@ -1,7 +1,7 @@
 /* footer, footer paragraph, and general inquiries container */
 footer,
 footer p {
-  background-color: #1e4258;
+  background-color: #022140;
   opacity: 0.8;
 }
 
@@ -16,5 +16,5 @@ footer {
 }
 
 footer p {
-  color: white;
+  color: rgb(206, 206, 206);
 }

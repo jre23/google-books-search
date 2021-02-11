@@ -8,6 +8,7 @@
     "start:prod": "node server.js",
     "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"npm run client\"",
     "client": "cd client && npm run start",
+    "seed": "node scripts/seedDB.js",
     "install": "cd client && npm install",
     "build": "cd client && npm run build",
     "heroku-postbuild": "npm run build"
@@ -16,7 +17,7 @@
     "type": "git",
     "url": "git+https://github.com/jre23/google-books-search.git"
   },
-  "author": "",
+  "author": "Joel Estrada",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/jre23/google-books-search/issues"
@@ -26,6 +27,7 @@
     "axios": "^0.21.1",
     "bootstrap": "^4.6.0",
     "express": "^4.17.1",
+    "if-env": "^1.0.4",
     "mongoose": "^5.11.15"
   },
   "devDependencies": {

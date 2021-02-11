@@ -1,6 +1,8 @@
 import React from "react";
 
 const ResultsList = (props) => {
+  console.log("====results list component====");
+  console.log(props.results);
   return (
     <>
       <div className="col">
@@ -9,7 +11,14 @@ const ResultsList = (props) => {
             <li className="list-group-item" key={res.id}>
               <div style={{ float: "left" }}>
                 <h5>{res.volumeInfo.title}</h5>
-                <h6>Written by {res.volumeInfo.authors}</h6>
+                <h6>
+                  Written by{" "}
+                  {res.volumeInfo.authors !== undefined
+                    ? res.volumeInfo.authors.map((item) => {
+                        return item + " ";
+                      })
+                    : res.volumeInfo.authors}
+                </h6>
               </div>
               <div>
                 <a className="btn btn-info" style={{ float: "right" }}>
@@ -31,7 +40,11 @@ const ResultsList = (props) => {
                   alt={res.volumeInfo.title}
                   className="img-fluid pr-4"
                   style={{ float: "left" }}
-                  src={res.volumeInfo.imageLinks.thumbnail}
+                  src={
+                    res.volumeInfo.imageLinks !== undefined
+                      ? res.volumeInfo.imageLinks.thumbnail
+                      : ""
+                  }
                 />
                 <h6>{res.volumeInfo.description}</h6>
               </div>

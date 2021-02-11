@@ -4,7 +4,10 @@ import Search from "../pages/Search";
 const SearchInput = (props) => {
   return (
     <>
-      <div className="input-group col-4" style={{ margin: "0 auto" }}>
+      <div
+        className="input-group col-md-6 col-sm-8"
+        style={{ margin: "0 auto" }}
+      >
         <input
           id="search-input"
           type="text"
