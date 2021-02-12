@@ -2,15 +2,14 @@
 
 ## Table of Contents
 
-- [Google Books Search](#google-books-search)
-  - [Table of Contents](#table-of-contents)
-  - [Description](#description)
-  - [GitHub Repo and Heroku Deployment](#github-repo-and-heroku-deployment)
-  - [Screenshots](#screenshots)
-  - [Technologies](#technologies)
-  - [Installation](#installation)
-  - [Usage](#usage)
-  - [Credits](#credits)
+- [Table of Contents](#table-of-contents)
+- [Description](#description)
+- [GitHub Repo and Heroku Deployment](#github-repo-and-heroku-deployment)
+- [Screenshots](#screenshots)
+- [Technologies](#technologies)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Credits](#credits)
 
 ## Description
 
