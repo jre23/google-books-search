@@ -59,3 +59,24 @@ a:active {
   height: 100%;
   width: 100%;
 }
+
+/* font sizes for responsiveness */
+@media screen and (max-width: 576px) {
+  h1 {
+    font-size: 31px;
+  }
+
+  a.btn-info {
+    width: 62px;
+    padding-left: 7px;
+  }
+
+  a:hover {
+    color: red;
+    font-size: 0.9rem;
+  }
+
+  h2 {
+    font-size: 25px;
+  }
+}

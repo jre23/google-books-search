@@ -6,21 +6,20 @@ const maxResults = "maxResults=23&";
 const userSearch = "q=title:";
 // define API methods
 const API = {
-  // function to search for a book based on user input
+  // this function queries the Google Books APIs to search for books based on user input
   search: (query) => {
-    // console.log(query);
     return axios.get(BASEURL + maxResults + userSearch + query);
   },
+  // this function gets all of the saved books from the mongodb
   getSavedBooks: () => {
-    console.log("====getSavedBooks====");
     return axios.get("/api/books");
   },
+  // this function saves a book to the mongodb
   saveBook: (bookData) => {
-    console.log("====saveBook====");
     return axios.post("/api/books/", bookData);
   },
+  // this function deletes a book from the mongodb
   deleteBook: (id) => {
-    console.log("====deleteBook====");
     return axios.delete("/api/books/" + id);
   },
 };
