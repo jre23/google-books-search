@@ -1,5 +1,6 @@
+// import dependencies
 import React from "react";
-
+// define SavedList component
 const SavedList = (props) => {
   console.log("====results list component====");
   console.log(props.results);
@@ -57,5 +58,5 @@ const SavedList = (props) => {
     </>
   );
 };
-
+// export SavedList component
 export default SavedList;

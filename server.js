@@ -1,10 +1,13 @@
+// require dependencies
 const express = require("express");
 const path = require("path");
 const mongoose = require("mongoose");
 const routes = require("./routes");
+// initialize express app
 const app = express();
+// configure the PORT
 const PORT = process.env.PORT || 3001;
-// define middleware
+// use middleware to handle json, string, or array request objects
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 // serve static assets (usually on heroku)

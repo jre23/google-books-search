@@ -65,7 +65,7 @@ Git for Windows: 2.28.0.1
 
 [Google Books APIs](https://developers.google.com/books)
 
-Git clone link: htt<span>ps://github.com/jre23/employee-directory.git</span>
+Git clone link: htt<span>ps://github.com/jre23/google-books-search.git</span>
 
 ## Usage
 

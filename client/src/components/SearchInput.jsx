@@ -1,6 +1,6 @@
+// import dependencies
 import React from "react";
-import Search from "../pages/Search";
-
+// define SearchInput component
 const SearchInput = (props) => {
   return (
     <>
@@ -31,5 +31,5 @@ const SearchInput = (props) => {
     </>
   );
 };
-
+// export SearchInput component
 export default SearchInput;

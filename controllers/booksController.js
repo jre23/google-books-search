@@ -1,8 +1,8 @@
+// require dependencies
 const db = require("../models");
-
-console.log("====controller====");
-// Defining methods for the booksController
+// define methods for the booksController
 module.exports = {
+  // this method is used to get all of the books the user has saved to the mongodb
   findAll: function(req, res) {
     db.Book
       .find(req.query)
@@ -10,12 +10,14 @@ module.exports = {
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
+  // this method is used to add a book to the mongodb (when a user hits the save button)
   create: function(req, res) {
     db.Book
       .create(req.body)
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
+  // this method is used to delete a book from the mongodb (when a user hits the delete button and has confirmed deletion)
   remove: function(req, res) {
     db.Book
       .findById({ _id: req.params.id })

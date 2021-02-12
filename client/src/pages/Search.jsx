@@ -1,9 +1,10 @@
+// import dependencies
 import React, { useEffect, useState } from "react";
 import API from "../utils/API";
 import Jumbotron from "../components/Jumbotron";
 import ResultsList from "../components/ResultsList";
 import SearchInput from "../components/SearchInput";
-
+// define Search component
 const Search = () => {
   const [searchState, setSearchState] = useState({
     userSearch: "",
@@ -11,11 +12,8 @@ const Search = () => {
   });
 
   const bookSearchAPI = () => {
-    // console.log(searchState.userSearch);
     API.search(searchState.userSearch)
       .then((res) => {
-        // console.log("=====res=====");
-        console.log(res.data.items);
         setSearchState({
           ...searchState,
           results: res.data.items,
@@ -34,12 +32,10 @@ const Search = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
     let dataValue = document.getElementById("search-input").value;
-    console.log(dataValue);
     setSearchState({ ...searchState, userSearch: dataValue });
   };
 
   const handleSave = (event) => {
-    console.log("====handleSave====");
     let bookData = {
       title: event.title,
       authors: event.authors,
@@ -49,7 +45,6 @@ const Search = () => {
     };
     API.saveBook(bookData)
       .then((res) => {
-        console.log(res);
         window.alert("This book has been saved!");
       })
       .catch((err) => console.log(err));
@@ -84,5 +79,5 @@ const Search = () => {
     </>
   );
 };
-
+// export Search component
 export default Search;

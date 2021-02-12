@@ -1,5 +1,6 @@
+// import dependencies
 import React from "react";
-
+// define ResultsList component
 const ResultsList = (props) => {
   console.log("====results list component====");
   return (
@@ -60,5 +61,5 @@ const ResultsList = (props) => {
     </>
   );
 };
-
+// export ResultsList component
 export default ResultsList;

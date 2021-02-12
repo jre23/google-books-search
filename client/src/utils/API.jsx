@@ -1,9 +1,10 @@
+// import dependencies
 import axios from "axios";
-
+// define url endpoint for google books apis
 const BASEURL = "https://www.googleapis.com/books/v1/volumes?";
 const maxResults = "maxResults=23&";
 const userSearch = "q=title:";
-
+// define API methods
 const API = {
   // function to search for a book based on user input
   search: (query) => {
@@ -23,5 +24,5 @@ const API = {
     return axios.delete("/api/books/" + id);
   },
 };
-
+// export API methods
 export default API;

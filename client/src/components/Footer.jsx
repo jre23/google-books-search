@@ -1,6 +1,7 @@
+// import dependencies
 import React from "react";
 import "../styles/Footer.css";
-
+// define Footer component
 const Footer = () => {
   return (
     <footer className="text-center py-1">
@@ -8,5 +9,5 @@ const Footer = () => {
     </footer>
   );
 };
-
+// export Footer component
 export default Footer;

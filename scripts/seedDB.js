@@ -1,3 +1,5 @@
+// seed data to use during development of the database
+// use "npm run seed" to use this file 
 const mongoose = require("mongoose");
 const db = require("../models");
 

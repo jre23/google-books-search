@@ -1,5 +1,6 @@
+// import dependencies
 import React from "react";
-
+// define Jumbotron component
 const Jumbotron = ({ children }) => {
   return (
     <div className="col justify-content-center">
@@ -18,5 +19,5 @@ const Jumbotron = ({ children }) => {
     </div>
   );
 };
-
+// export Jumbotron component
 export default Jumbotron;

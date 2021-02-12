@@ -1,8 +1,9 @@
+// import dependencies
 import React, { useEffect, useState } from "react";
 import API from "../utils/API";
 import Jumbotron from "../components/Jumbotron";
 import SavedList from "../components/SavedList";
-
+// define Saved component
 const Saved = () => {
   const [savedBooks, setSavedBooks] = useState({
     results: [],
@@ -12,7 +13,6 @@ const Saved = () => {
     API.getSavedBooks()
       .then((res) => {
         setSavedBooks({ results: res.data });
-        console.log(res.data);
       })
       .catch((err) => console.log(err));
   };
@@ -22,14 +22,12 @@ const Saved = () => {
   }, []);
 
   const handleDelete = (id) => {
-    console.log(id);
     let deleteBool = window.confirm(
       "Are you sure you want to delete this saved book?"
     );
     if (deleteBool) {
       API.deleteBook(id)
         .then((res) => {
-          console.log(res);
           loadSavedBooks();
         })
         .catch((err) => console.log(err));
@@ -53,5 +51,5 @@ const Saved = () => {
     </>
   );
 };
-
+// export Saved component
 export default Saved;

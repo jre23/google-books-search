@@ -1,9 +1,10 @@
+// import dependencies
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import NavLinks from "./components/NavLinks";
 import Search from "./pages/Search";
 import Saved from "./pages/Saved";
 import Footer from "./components/Footer";
-
+// define App component
 const App = () => {
   return (
     <Router>
@@ -25,5 +26,5 @@ const App = () => {
     </Router>
   );
 };
-
+// export App component
 export default App;

@@ -1,7 +1,8 @@
+// import dependencies
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import "../styles/NavLinks.css";
-
+// define NavLinks component
 const NavLinks = () => {
   const location = useLocation();
 
@@ -78,5 +79,5 @@ const NavLinks = () => {
     </>
   );
 };
-
+// export NavLinks component
 export default NavLinks;
