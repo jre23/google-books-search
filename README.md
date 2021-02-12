@@ -24,13 +24,13 @@ The goal for this project was to build a React application that shows a list of 
 
 ## Screenshots
 
-![google books search screenshot 1]()
+![google books search screenshot 1](https://user-images.githubusercontent.com/69170823/107720064-6e807400-6c8e-11eb-89d1-98bae3f20314.png)
 
-![google books search screenshot 2]()
+![google books search screenshot 2](https://user-images.githubusercontent.com/69170823/107720134-9243ba00-6c8e-11eb-81a2-c32e13c3e88c.png)
 
-![google books search screenshot 3]()
+![google books search screenshot 3](https://user-images.githubusercontent.com/69170823/107720218-c3bc8580-6c8e-11eb-9571-fe56f73ba353.png)
 
-![google books search screenshot 4]()
+![google books search screenshot 4](https://user-images.githubusercontent.com/69170823/107720268-e2228100-6c8e-11eb-953a-8cc6bb771deb.png)
 
 ## Technologies
 
