@@ -28,7 +28,7 @@ const NavLinks = () => {
               ? "navbar navbar-expand-lg navbar-dark nav-search"
               : location.pathname === "/saved"
               ? "navbar navbar-expand-lg navbar-dark nav-saved"
-              : "navbar navbar-expand-lg navbar-dark"
+              : "navbar navbar-expand-lg navbar-dark nav-search"
           }
         >
           <Link to="/" className="navbar-brand">

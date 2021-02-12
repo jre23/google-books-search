@@ -19,7 +19,7 @@ The goal for this project was to build a React application that shows a list of 
 
 [GitHub Repo](https://github.com/jre23/google-books-search)
 
-[Heroku Deployment]()
+[Heroku Deployment](https://react-google-books-search-jre.herokuapp.com)
 
 ## Screenshots
 
