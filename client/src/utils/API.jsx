@@ -1,14 +1,14 @@
 // import dependencies
 import axios from "axios";
-// define url endpoint for google books apis
-const BASEURL = "https://www.googleapis.com/books/v1/volumes?";
-const maxResults = "maxResults=23&";
-const userSearch = "q=title:";
+// // define url endpoint for google books apis
+// const BASEURL = "https://www.googleapis.com/books/v1/volumes?";
+// const maxResults = "maxResults=23&";
+// const userSearch = "q=title:";
 // define API methods
 const API = {
   // this function queries the Google Books APIs to search for books based on user input
   search: (query) => {
-    return axios.get(BASEURL + maxResults + userSearch + query);
+    return axios.get("/api/books/search/" + query);
   },
   // this function gets all of the saved books from the mongodb
   getSavedBooks: () => {

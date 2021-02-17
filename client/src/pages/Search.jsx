@@ -16,7 +16,7 @@ const Search = () => {
       .then((res) => {
         setSearchState({
           ...searchState,
-          results: res.data.items,
+          results: res.data,
         });
       })
       .catch((err) => console.log(err));
