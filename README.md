@@ -2,18 +2,19 @@
 
 ## Table of Contents
 
-- [Table of Contents](#table-of-contents)
-- [Description](#description)
-- [GitHub Repo and Heroku Deployment](#github-repo-and-heroku-deployment)
-- [Screenshots](#screenshots)
-- [Technologies](#technologies)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Credits](#credits)
+- [Google Books Search](#google-books-search)
+  - [Table of Contents](#table-of-contents)
+  - [Description](#description)
+  - [GitHub Repo and Heroku Deployment](#github-repo-and-heroku-deployment)
+  - [Screenshots](#screenshots)
+  - [Technologies](#technologies)
+  - [Installation](#installation)
+  - [Usage](#usage)
+  - [Credits](#credits)
 
 ## Description
 
-The goal for this project was to build a React application that shows a list of books based on the user's search input and allows the user to save any books from the list into their own saved list. This application uses the Google Books APIs to obtain the list of books.
+The goal for this project was to build a React application that shows a list of books based on the user's search input and allows the user to save any books from the list into their own saved list. This application uses the Google Books API to obtain the list of books.
 
 ## GitHub Repo and Heroku Deployment
 
@@ -43,7 +44,7 @@ Please see the following for a list of technologies used in this project:
 - Express
 - React
 - Node.js
-- Google Books APIs
+- Google Books API
 
 ## Installation
 
@@ -62,7 +63,7 @@ Git for Windows: 2.28.0.1
 
 [Node.js](https://nodejs.org/en)
 
-[Google Books APIs](https://developers.google.com/books)
+[Google Books API](https://developers.google.com/books)
 
 Git clone link: htt<span>ps://github.com/jre23/google-books-search.git</span>
 

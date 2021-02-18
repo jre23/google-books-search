@@ -2,7 +2,7 @@
 import axios from "axios";
 // define API methods
 const API = {
-  // this function queries the Google Books APIs to search for books based on user input
+  // this function queries the Google Books API to search for books based on user input
   search: (query) => {
     return axios.get("/api/books/search/" + query);
   },
